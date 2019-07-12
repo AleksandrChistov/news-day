@@ -622,7 +622,7 @@ p {
 }
 
 .footer__logo {
-	background: url('../img/logo-footer.png') no-repeat;
+	background: url('../img/logo.png') no-repeat;
 	background-size: 40px 40px;
 	font-size: 14px;
 	font-weight: bold;
