@@ -342,6 +342,7 @@ p {
 	line-height: 35px;
 	display: inline-block;
 	margin-bottom: 15px;
+	font-weight: bold;
 }
 
 .news-main__top {
@@ -489,7 +490,8 @@ p {
 	margin: 20px 0 10px;
 	line-height: 35px;
 	display: block;
-	width: 70%;
+	width: 80%;
+	font-weight: bold;
 }
 
 .news-big__main-date {
