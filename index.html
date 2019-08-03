@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<title>Новостное агентство</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/media.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-up">
+				<div class="header-up__container container clearfix">
+					<p class="header-up__news">Самые <a href="#">свежие новости</a> в реальном времени</p>
+					<time class="header-up__date" datetime="2019-06-19T12:30">12:30 19.06.2019</time>
+				</div>
+			</div>
+			<div class="header-center_background">
+				<div class="header-center container">
+					<div class="header-center__wrap">
+						<button class="toggle-menu" aria-label="Открыть меню"></button>
+							<picture class="header-center__logo-wrap">
+								<source srcset="img/news-logo-wide.png" media="(min-width: 661px)">
+								<img src="img/news-logo-narrow.png" alt="News">
+							</picture>
+							<p class="header-center__info">
+								<label class="header-center__select-wrapper">
+								Выбор города
+								<select class="header-center__select-city">
+									<option value="MSK">Москва</option>
+								</select>
+								</label>
+								<time class="header-center__info-time" datetime="2019-06-19T10:48">
+									<span class="header-center__date"></span>
+									<span class="header-center__time">10:48</span>
+								</time>
+									<span class="header-center__sky">+22 &#176;C</span>
+							</p>
+
+							<form class="header-center__search" action="#" method="GET">
+								<input type="text" id="search" class="header__search-input" name="search">
+								<label for="search" class="header__search-label">Поиск по сайту</label>
+								<button class="header__search-submit" type="submit" aria-label="Найти"></button>
+							</form>
+						</div>
+					
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#">Главная</a></li>
+								<li class="menu__item"><a href="#">Политика</a></li>
+								<li class="menu__item"><a href="#">Общество</a></li>
+								<li class="menu__item"><a href="#">Экономика</a></li>
+								<li class="menu__item"><a href="#">В мире</a></li>
+								<li class="menu__item"><a href="#">Проишествия</a></li>
+								<li class="menu__item"><a href="#">Спорт</a></li>
+								<li class="menu__item"><a href="#">Наука</a></li>
+								<li class="menu__item"><a href="#">Туризм</a></li>
+							</ul>
+						</nav>
+
+				</div>
+				
+			</div>
+		</header>
+		
+		<main class="main">
+			
+			<div class="container flex-container">
+
+					<section class="news-day">
+							<h2 class="news-day__heading">Новости дня</h2>
+						<div class="news-day__block">
+							<article class="news-day__article">
+								<a class="news-day__title" href="">Кот Ахилл предсказал победу российской сборной над Египтом на ЧМ-2018</a>
+								<p class="news-day__item">
+									<a href="#">ЧМ по футболу</a>
+									<time class="news-day__time" datetime="2019-06-19T10:48">10:48</time>
+									<span class="news-day__comments">15</span>
+								</p>
+							</article>
+	
+							<article class="news-day__article">
+								<a class="news-day__title" href="">«Нафтогаз»: суд разрешил заморозить активы «Газпрома» в Великобритании</a>
+								<p class="news-day__item">
+									<a href="#">Политика</a>
+									<time class="news-day__time" datetime="2019-06-19T10:48">10:48</time>
+									<span class="news-day__comments">15</span>
+								</p>
+							</article>
+	
+							<article class="news-day__article">
+								<a class="news-day__title" href="">Минтранс предписал оборудовать общественный транспорт кондиционерами</a>
+								<p class="news-day__item">
+									<a href="#">Транспорт</a>
+									<time class="news-day__time" datetime="2019-06-19T10:48">10:48</time>
+									<span class="news-day__comments">15</span>
+								</p>
+							</article>
+	
+							<article class="news-day__article">
+								<a class="news-day__title" href="">Летние кафе Москвы временно закроются из-за непогоды</a>
+								<p class="news-day__item">
+									<a href="#">Погода</a>
+									<time class="news-day__time" datetime="2019-06-19T10:48">10:48</time>
+									<span class="news-day__comments">15</span>
+								</p>
+							</article>
+	
+							<article class="news-day__article">
+								<a class="news-day__title" href="">Комплексное благоустройство Щелковского шоссе завершится в июне</a>
+								<p class="news-day__item">
+									<a href="#">Транспорт</a>
+									<time class="news-day__time" datetime="2019-06-19T10:48">10:48</time>
+									<span class="news-day__comments">15</span>
+								</p>
+							</article>
+	
+							<article class="news-day__article">
+								<a class="news-day__title" href="">В Москве назвали самое популярное мороженое у болельщиков ЧМ-2018</a>
+								<p class="news-day__item">
+									<a href="#">ЧМ по футболу</a>
+									<time class="news-day__time" datetime="2019-06-19T10:48">10:48</time>
+									<span class="news-day__comments">15</span>
+								</p>
+							</article>
+						</div>
+						<a href="#" class="news-day__btn">Все новости</a>
+					</section>
+
+					
+					<section class="news-main">
+							<article class="news-main__top">
+								<a class="news-main__link" href="#">Политика</a>
+								<a class="news-main__title" href="#">В Крыму отреагировали на слова Кравчука о возврате полуострова</a>
+								<time class="news-main__item" datetime="2019-06-18T10:48">
+									<span class="news-main__date">19 июня 2018</span>
+									<span class="news-main__time">10:48</span>
+								</time>
+								<img class="news-main__top-img" src="img/news-banner.jpg" alt="Крым">
+							</article>
+						<div class="news-main__wrap-card">
+							<article class="news-main__card">
+								<img src="img/news-card-1.jpg" alt="Новость дня 1">
+								<a class="news-main__card-title" href="#">Алексей Навальный объявил акцию против пенсионной реформы 1 июля</a>
+								<p class="news-main__card-item">
+									<a href="#">Политика</a>
+									<time class="news-main__card-time" datetime="2019-06-18T10:48">10:48</time>
+									<span class="news-main__card-comments">15</span>
+								</p>
+							</article>
+							<article class="news-main__card news-main__card_right">
+								<img src="img/news-card-2.jpg" alt="Новость дня 2">
+									<a class="news-main__card-title" href="#">Дума увеличила пошлины за выдачу загранпаспортов и водительских прав</a>
+								<p class="news-main__card-item">
+									<a href="#">Общество</a>
+									<time class="news-main__card-time" datetime="2019-06-18T12:33">12:33</time>
+									<span class="news-main__card-comments">36</span>
+								</p>
+							</article>
+							<article class="news-main__card">
+								<img src="img/news-card-3.jpg" alt="Новость дня 3">
+									<a class="news-main__card-title" href="#">В России заработал стриминговый сервис YouTube</a>
+								<p class="news-main__card-item">
+									<a href="#">Интернет</a>
+									<time class="news-main__card-time" datetime="2019-06-18T11:17">11:17</time>
+									<span class="news-main__card-comments">10</span>
+								</p>
+							</article>
+							<article class="news-main__card news-main__card_right">
+								<img src="img/news-card-4.jpg" alt="Новость дня 4">
+									<a class="news-main__card-title" href="#">Кейн признан лучшим игроком матча ЧМ-2018 Тунис — Англия</a>
+								<p class="news-main__card-item">
+									<a href="#">Политика</a>
+									<time class="news-main__card-time" datetime="2019-06-18T11:39">11:39</time>
+									<span class="news-main__card-comments">25</span>
+								</p>
+							</article>
+						</div>
+						</section>
+				
+				
+
+				
+					
+				<aside class="sidebar">
+					<div class="sidebar__wrap">
+					<img src="img/banner-1.jpg" alt="">
+					<img src="img/banner-2.jpg" alt="">
+					</div>
+				</aside>
+
+			</div>
+		
+			<section class="news-big container">
+					<article class="news-big__main">
+						<a class="news-big__main-link" href="#">Политика</a>
+						<a class="news-big__title" href="#">Пекин обвинил Вашингтон в развязывании торговой войны</a>
+						<time class="news-big__main-item" datetime="2018-06-18T10:48">
+							<span class="news-big__main-date">19 июня 2018</span>
+							<span class="news-big__main-time">10:48</span>
+						</time>
+						<p>Министерство коммерции Китая заявило, что Пекин примет «качественные» и «количественные» меры, если президент США Дональд Трамп введет дополнительные пошлины на китайские товары</p>
+						<img class="news-big__img" src="img/news-big.jpg" alt="Пекин">
+					</article>
+					<div class="news-big__right">
+						<h2 class="news-big__right-heading">Самые читаемые новости</h2>
+						<article class="news-big__right-card">
+							<a class="news-big__right-title" href="#">В Турции пообещали найти альтернативу из-за отказа США поставить F-35</a>
+							<p class="news-big__right-item">
+								<a href="#">Политика</a>
+								<time class="news-big__right-time" datetime="2018-06-18T11:39">11:39</time>
+								<span class="news-big__right-comments">25</span>
+							</p>
+						</article>
+						<article class="news-big__right-card">
+							<a class="news-big__right-title" href="#">Назван минимальный доход для причисления к среднему классу‍</a>
+							<p class="news-big__right-item">
+								<a href="#">Политика</a>
+								<time class="news-big__right-time" datetime="2018-06-18T11:39">11:39</time>
+								<span class="news-big__right-comments">25</span>
+							</p>
+						</article>
+						<article class="news-big__right-card">
+							<a class="news-big__right-title" href="#">Назван минимальный доход для причисления к среднему классу‍</a>
+							<div class="news-big__right-item">
+								<a href="#">Политика</a>
+								<time class="news-big__right-time" datetime="2018-06-18T11:39">11:39</time>
+								<span class="news-big__right-comments">25</span>
+							</div>
+						</article>
+					</div>
+			</section>
+
+			<footer class="footer">
+				<div class="footer__container container">
+					<div class="footer__item">
+						<div class="footer__item_left">
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li><a href="">Политика</a></li>
+								<li><a href="">Общество</a></li>
+								<li><a href="">Экономика</a></li>
+								<li><a href="">В мире</a></li>
+							</ul>
+						</div>
+						<div class="footer__item_right">
+							<ul>
+								<li><a href="">Путешествия</a></li>
+								<li><a href="">Спорт</a></li>
+								<li><a href="">Наука</a></li>
+								<li><a href="">Туризм</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__about">
+						<div class="footer__about_container">
+								<img class="footer__logo" src="img/news-logo-footer.png" alt="News">
+							<ul>
+								<li><a href="">Об агенстве</a></li>
+								<li><a href="">Контакты</a></li>
+								<li><a href="">Опубликовать новость</a></li>
+							</ul>
+						</div>
+					</div>
+					<address class="footer__contacts">
+						<ul class="footer__social">
+							<li><a class="footer__social-vk" href="#" aria-label="Вконтакте"></a></li>
+							<li><a class="footer__social-fb" href="#" aria-label="Facebook"></a></li>
+							<li><a class="footer__social-tw" href="#" aria-label="Twitter"></a></li>
+							<li><a class="footer__social-ins" href="#" aria-label="Instagram"></a></li>
+						</ul>
+						<a href="tel:+7(499)995-55-55" class="footer__tel">+7 (499) 995-55-55</a>
+						<a href="mailto:info@agency.ru" class="footer__mail">info@agency.ru</a>
+					</address>
+				</div>
+				<div class="footer__container-copyright container">
+					© Новостное агентство, 2017-2018 все права защищены
+				</div>
+			</footer>
+
+		</main>
+	</body>
+</html>
