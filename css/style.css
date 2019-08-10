@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  min-width: 1000px;
   font: 16px/20px 'Arial', sans-serif;
   color: #000;
 	background-color: #f9f9f9;
@@ -36,7 +35,10 @@ p {
 
 .container {
 	margin: 0 auto;
-	width: 1000px;
+	max-width: 1000px;
+	min-width: 320px;
+	padding: 0 20px;
+	overflow: hidden;
 }
 
 .clearfix::after {
@@ -52,7 +54,6 @@ p {
 }
 
 .header-up__container {
-	width: 1000px;
 	margin: 0 auto;
 }
 
@@ -71,34 +72,32 @@ p {
 }
 
 .header-center {
-	width: 1000px;
 	margin: 0 auto;
-	padding: 40px 0 30px;
+	padding-top: 40px;
+	padding-bottom: 25px;
+}
+
+.header-center__wrap {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-center__logo-wrap {
+	display: flex;
+	min-width: 116px;
+	height: auto;
+	margin-right: 30px;
 }
 
 .header-center_background {
 	background-color: #ffffff;
-}
-
-.header-center__logo {
-	float: left;
-	margin-right: 10px;
-	width: 40px;
-	height: auto;
-}
-
-.header-center__logo-text {
-	float: left;
-	font-size: 14px;
-	font-weight: bold;
-	margin-right: 55px;
+	overflow: hidden;
 }
 
 .header-center__select-wrapper {
 	display: inline-block;
 	position: relative;
 	font-size: 0;
-	margin-right: 40px;
 }
 
 .header-center__select-wrapper::after {
@@ -128,14 +127,28 @@ p {
 }
 
 .header-center__info {
-	float: left;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	margin-right: 15px;
+	min-width: 440px;
+}
+
+.header-center__info-time {
+	display: flex;
+	justify-content: space-between;
+	flex-basis: 220px;
+	max-width: 100%;
 }
 
 .header-center__date {
 	margin-top: 10px;
 	display: inline-block;
 	color: #91919f;
-	margin-right: 25px;
+}
+
+.header-center__date::after {
+	content: "19 июня, вторник";
 }
 
 .header-center__time {
@@ -143,15 +156,14 @@ p {
 	background-size: 16px 16px;
 	padding-left: 25px;
 	margin-top: 10px;
-	margin-right: 25px;
 	display: inline-block;
 	color: #91919f;
 }
 
 .header-center__sky {
-	margin-top: 11px;
+	padding-top: 11px;
 	padding-left: 37px;
-	background: url('../img/icons/cloudy.png') no-repeat left center;
+	background: url('../img/icons/cloudy.png') no-repeat left 80%;
 	background-size: 29px 21px;
 	color: #91919f;
 	display: inline-block;
@@ -160,7 +172,8 @@ p {
 .header-center__search {
 	float: right;
 	position: relative;
-	width: 320px;
+	flex-basis: 310px;
+	max-width: 100%;
 	font-size: 14px;
 }
 
@@ -204,7 +217,7 @@ p {
 
 .menu {
 	clear: both;
-	padding-top: 25px;
+	padding-top: 20px;
 }
 
 .menu__list {
@@ -212,10 +225,13 @@ p {
   padding: 0;
 	list-style: none;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
 }
 
 .menu__item a {
 	color: #000000;
+	line-height: 30px;
 }
 
 /* задает стили для всех псевдо-элементов, кроме последнего */
@@ -234,12 +250,14 @@ p {
 	background-repeat: repeat-x;
 }
 
+.flex-container {
+	display: flex;
+	padding-top: 20px;
+}
+
 .news-day {
-	float: left;
-	width: 250px;
+	flex-basis: 25%;
 	background-color: #ffffff;
-	margin-top: 20px;
-	margin-bottom: 17px;
 }
 
 .news-day__block {
@@ -286,15 +304,17 @@ p {
 .news-day__item {
 	padding: 0;
 	font-size: 12px;
-	margin-right: 20px;
+	margin-right: 10px;
 	margin-top: 15px;
-	text-align: right;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .news-day__item a {
 	color: #91919f;
 	font-size: 12px;
-	float: left;
+	flex-grow: 1;
 }
 
 .news-day__item a::before {
@@ -317,10 +337,10 @@ p {
 
 .news-main {
 	display: inline-block;
-	width: 460px;
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-bottom: 17px;
+	z-index: 1;
+	margin: 0 20px;
+	flex-basis: 46%;
+	min-width: 390px;
 }
 
 .news-main__link {
@@ -346,18 +366,22 @@ p {
 }
 
 .news-main__top {
-	width: 460px;
-	height: 322px;
+	max-width: 100%;
+	min-width: 395px;
+	height: auto;
 	position: relative;
-	padding: 110px 20px 40px;
-	background: url('../img/opacity.png') bottom center no-repeat;
+	padding: 100px 20px 30px;
+	background: url('../img/opacity.png') center center no-repeat;
+	background-size: 100% 100%;
 }
 
 .news-main__top-img {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -1;;
+	z-index: -1;
+	height: 100%;
+	object-fit: cover;
 }
 
 .news-main__item {
@@ -378,17 +402,20 @@ p {
 }
 
 .news-main__card {
-	width: 221px;
-	padding: 20px 0 0;
-	float: left;
+	max-width: 48%;
+	padding: 0;
+	margin-top: 20px;
 }
 
-.news-main__card_right {
-	float: right;
+.news-main__wrap-card {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	min-width: 395px;
 }
 
 .news-main__card img {
-	width: 221px;
+	width: 100%;
 	height: 142px;
 	object-fit: cover;
 }
@@ -433,10 +460,7 @@ p {
 }
 
 .sidebar {
-	float: right;
-	width: 250px;
-	margin-top: 20px;
-	margin-bottom: 17px;
+	flex-basis: 25%;
 }
 
 .sidebar img:first-child {
@@ -446,6 +470,7 @@ p {
 .news-big {
 	margin-bottom: 60px;
 	margin-top: 20px;
+	display: flex;
 }
 
 .news-big .container {
@@ -454,13 +479,13 @@ p {
 }
 
 .news-big__main {
-	background: url('../img/opacity-big.png') no-repeat;
-	background-size: 588px 393px;
-	width: 588px;
-	height: 393px;
+	background: url('../img/opacity-big.png') center center no-repeat;
+	background-size: 100% 100%;
+	max-width: 100%;
+	height: auto;
 	position: relative;
-	float: left;
-	padding-top: 100px;
+	padding: 100px 20px 20px;
+	flex-basis: 555px;
 }
 
 .news-big__img {
@@ -468,12 +493,13 @@ p {
 	top: 0;
 	left: 0;
 	z-index: -1;
+	height: 100%;
+	object-fit: cover;
 }
 
 .news-big__main-link {
 	font-size: 12px;
 	color: #ffffff;
-	padding-left: 20px;
 	display: block;
 }
 
@@ -485,12 +511,10 @@ p {
 .news-big__title {
 	font-size: 30px;
 	color: #ffffff;
-	padding-left: 20px;
 	padding-top: 0;
 	margin: 20px 0 10px;
 	line-height: 35px;
 	display: block;
-	width: 80%;
 	font-weight: bold;
 }
 
@@ -508,7 +532,6 @@ p {
 .news-big__main-item {
 	font-size: 12px;
 	color: #ffffff;
-	padding-left: 20px;
 	margin-bottom: 15px;
 	display: inline-block;
 }
@@ -518,14 +541,14 @@ p {
 	color: #ffffff;
 	padding: 0;
 	line-height: 20px;
-	margin: 0 0 0 20px;
-	width: 510px;
+	margin: 0;
+	max-width: 510px;
 }
 
 .news-big__right {
 	background-color: #fff;
-	float: right;
-	width: 412px;
+	max-width: 100%;
+	flex-basis: 412px;
 }
 
 .news-big__right-heading {
@@ -538,18 +561,17 @@ p {
 }
 
 .news-big__right-card {
-	padding: 12px 10px 0 20px;
+	padding: 22px 10px 0 20px;
 	display: inline-block;
 }
 
 .news-big__right-card:last-child {
-	padding: 2px 10px 15px 20px;
+	padding: 12px 10px 15px 20px;
 }
 
 .news-big__right-title {
     font-size: 16px;
     font-weight: bold;
-    padding-top: 10px;
     padding-left: 0;
     color: #000000;
     display: inline-block;
@@ -591,25 +613,27 @@ p {
 }
 
 .footer__container {
-	width: 1000px;
 	margin: 0 auto;
-	padding: 50px 0;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .footer__item {
-	float: left;
-	width: 250px;
+	min-width: 240px;
+	flex-basis: 240px;
 }
 
 .footer__about {
-    display: inline-block;
-    width: 500px;
-    margin-left: 10px;
+		display: inline-block;
+		flex-basis: 480px;
+		max-width: 100%; 
 }
 
 .footer__about_container {
 	width: 175px;
-    margin: auto;
+	margin: auto;
 }
 
 .footer__about ul {
@@ -624,20 +648,16 @@ p {
 }
 
 .footer__logo {
-	background: url('../img/logo.png') no-repeat;
-	background-size: 40px 40px;
-	font-size: 14px;
-	font-weight: bold;
-	padding: 1px 0 4px 50px;
+	padding: 0;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	color: #ffffff;
 }
 
 .footer__contacts {
-	float: right;
-	width: 230px;
+	flex-basis: 220px;
+	min-width: 220px;
 	margin-top: 5px;
+	font-style: normal;
 }
 
 .footer__item_left {
@@ -697,6 +717,14 @@ p {
 	margin-right: 13px;
 }
 
+.footer__social {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 .footer__social a {
 	background-size: 40px 40px;
 	display: inline-block;
@@ -729,12 +757,22 @@ p {
 	margin: 0 auto;
 	background-color: #00122f;
 	border-top: 1px solid #26354e;
-}
-
-.footer__container-copyright p {
 	font-size: 14px;
 	color: #ffffff;
 	padding: 15px 0;
 	text-align: center;
-	margin: 0;
+	font-style: normal;
+}
+
+.toggle-menu {
+	background: url('../img/icons/menu-mobile.ico') center no-repeat;
+	background-size: 40px 42px;
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	cursor: pointer;
+	position: relative;
+	display: none;
+	border: 0;
+	outline: none;
 }
